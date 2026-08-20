@@ -1,0 +1,116 @@
+const properties = [
+  {
+    id: 1,
+    name: "3 Bedroom Terrace",
+    area: "Lekki Phase 1, Lagos",
+    price: 45000000,
+    priceLabel: "₦45,000,000",
+    status: "sale",       // "sale" or "rent"
+    type: "house",        // "house", "apartment", "land", "commercial"
+    beds: 3,
+    baths: 2,
+    size: 180,
+    coordinates: [3.4700, 6.4698], // [lng, lat] — Lekki
+    phone: "+234 801 234 5678",
+  },
+  {
+    id: 2,
+    name: "2 Bedroom Flat",
+    area: "Victoria Island, Lagos",
+    price: 800000,
+    priceLabel: "₦800,000/yr",
+    status: "rent",
+    type: "apartment",
+    beds: 2,
+    baths: 2,
+    size: 110,
+    coordinates: [3.4219, 6.4281], // Victoria Island
+    phone: "+234 802 345 6789",
+  },
+  {
+    id: 3,
+    name: "5 Bedroom Duplex",
+    area: "Ikoyi, Lagos",
+    price: 120000000,
+    priceLabel: "₦120,000,000",
+    status: "sale",
+    type: "house",
+    beds: 5,
+    baths: 4,
+    size: 350,
+    coordinates: [3.4344, 6.4474], // Ikoyi
+    phone: "+234 803 456 7890",
+  },
+  {
+    id: 4,
+    name: "Studio Apartment",
+    area: "Yaba, Lagos",
+    price: 600000,
+    priceLabel: "₦600,000/yr",
+    status: "rent",
+    type: "apartment",
+    beds: 1,
+    baths: 1,
+    size: 45,
+    coordinates: [3.3792, 6.5156], // Yaba
+    phone: "+234 804 567 8901",
+  },
+  {
+    id: 5,
+    name: "Commercial Plaza",
+    area: "Ikeja, Lagos",
+    price: 280000000,
+    priceLabel: "₦280,000,000",
+    status: "sale",
+    type: "commercial",
+    beds: 0,
+    baths: 4,
+    size: 800,
+    coordinates: [3.3394, 6.5958], // Ikeja
+    phone: "+234 805 678 9012",
+  },
+  {
+    id: 6,
+    name: "Land — 500 sqm",
+    area: "Ajah, Lagos",
+    price: 18000000,
+    priceLabel: "₦18,000,000",
+    status: "sale",
+    type: "land",
+    beds: 0,
+    baths: 0,
+    size: 500,
+    coordinates: [3.5770, 6.4698], // Ajah
+    phone: "+234 806 789 0123",
+  },
+  {
+    id: 7,
+    name: "4 Bedroom Detached",
+    area: "Maitama, Abuja",
+    price: 95000000,
+    priceLabel: "₦95,000,000",
+    status: "sale",
+    type: "house",
+    beds: 4,
+    baths: 3,
+    size: 280,
+    coordinates: [7.4951, 9.0800], // Maitama Abuja
+    phone: "+234 807 890 1234",
+  },
+  {
+    id: 8,
+    name: "3 Bedroom Flat",
+    area: "Wuse Zone 5, Abuja",
+    price: 1200000,
+    priceLabel: "₦1,200,000/yr",
+    status: "rent",
+    type: "apartment",
+    beds: 3,
+    baths: 2,
+    size: 140,
+    coordinates: [7.4800, 9.0650], // Wuse Abuja
+    phone: "+234 808 901 2345",
+  },
+];
+
+export default properties;
