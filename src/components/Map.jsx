@@ -3,6 +3,7 @@ import { useRef, useEffect } from "react";
 import * as mapboxgl from "mapbox-gl/esm";
 import "mapbox-gl/dist/mapbox-gl.css";
 import properties from "../data/properties";
+import { Fuel, Funnel } from "lucide-react";
 
 const Map = () => {
   const mapRef = useRef();
@@ -33,7 +34,7 @@ const Map = () => {
       zoom: 11,
     });
 
-    mapRef.current.addControl(new mapboxgl.NavigationControl(), "top-left");
+    mapRef.current.addControl(new mapboxgl.NavigationControl(), "top-right");
 
     return () => {
       mapRef.current.remove();
@@ -90,7 +91,49 @@ const Map = () => {
     });
   }, [filterProperties, selectedProperty]);
 
-  return <div id="map" ref={mapContainerRef} style={{ height: "100vh" }}></div>;
+  return (
+    <div>
+      <header className="flex justify-between items-center p-4">
+        <div className="flex items-center gap-3">
+          <div className="bg-[#23476c] p-3 rounded-lg">
+            <Fuel />
+          </div>
+          <div>
+            <h1 className="text-xl text-gray-200 font-bold">NaijaHomes</h1>
+            <p className="text-sm text-gray-300">
+              Find properties accross Nigeria
+            </p>
+          </div>
+        </div>
+        <div className="w-[50%]">
+          <input
+            placeholder="Search by city, area of property type..."
+            className="w-full py-2 px-4 rounded-lg outline-none border border-[#23476c]"
+          />
+        </div>
+        <div className="flex items-center gap-4 cursor-pointer">
+          <div className="flex items-center gap-2 border border-gray-600 py-1 px-4 rounded-lg ">
+            <Funnel size={15} />
+            <p className="text-base text-gray-300">Filters</p>
+          </div>
+          <div className="flex items-center gap-2 bg-[#23476c] py-1 px-4 rounded-lg">
+            <span className="text-2xl">+</span>
+            <p className="text-base text-gray-300">List property</p>
+          </div>
+        </div>
+      </header>
+
+      <div className="flex">
+        <div
+          className="w-[70%]"
+          id="map"
+          ref={mapContainerRef}
+          style={{ height: "100vh" }}
+        ></div>
+        <div className="w-[30%]"></div>
+      </div>
+    </div>
+  );
 };
 
 export default Map;
