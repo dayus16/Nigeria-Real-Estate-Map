@@ -122,7 +122,39 @@ const Map = () => {
           </div>
         </div>
       </header>
-
+      <div className="flex gap-3 p-3 border-b border-gray-500 overflow-x-auto">
+        {["all", "sale", "rent"].map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+            className={`px-4 py-1.5 rounded-lg text-sm border whitespace-nowrap capitalize ${
+              aciveFilter === filter
+                ? "bg-blue-100 border-blue-500 text-blue-700"
+                : "border-gray-300 text-gray-600 bg-white"
+            }`}
+          >
+            {filter === "all"
+              ? "All"
+              : filter === "sale"
+                ? "For Sale"
+                : "For Rent"}
+          </button>
+        ))}
+        <div className="w-px bg-gray-500 mx-1"></div>
+        {["all", "house", "apartment", "land", "commercial"].map((type) => (
+          <button
+            key={type}
+            onClick={() => setTypeFilter(type)}
+            className={`px-4 py-1.5 rounded-lg text-sm border whitespace-nowrap capitalize ${
+              typeFilter === type
+                ? "bg-blue-100 border-blue-500 text-blue-700"
+                : "border-gray-300 text-gray-600 bg-white"
+            }`}
+          >
+            {type === "all" ? "All types" : type}
+          </button>
+        ))}
+      </div>
       <div className="flex">
         <div
           className="w-[70%]"
